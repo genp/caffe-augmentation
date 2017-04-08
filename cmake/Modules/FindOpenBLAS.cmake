@@ -1,9 +1,9 @@
-
-
 SET(Open_BLAS_INCLUDE_SEARCH_PATHS
   /usr/include
+  /usr/include/openblas
   /usr/include/openblas-base
   /usr/local/include
+  /usr/local/include/openblas
   /usr/local/include/openblas-base
   /opt/OpenBLAS/include
   $ENV{OpenBLAS_HOME}
@@ -25,6 +25,7 @@ SET(Open_BLAS_LIB_SEARCH_PATHS
         $ENV{OpenBLAS_HOME}
         $ENV{OpenBLAS_HOME}/lib
  )
+
 
 FIND_PATH(OpenBLAS_INCLUDE_DIR NAMES cblas.h PATHS ${Open_BLAS_INCLUDE_SEARCH_PATHS})
 FIND_LIBRARY(OpenBLAS_LIB NAMES openblas PATHS ${Open_BLAS_LIB_SEARCH_PATHS})
